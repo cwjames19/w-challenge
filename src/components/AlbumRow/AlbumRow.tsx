@@ -71,7 +71,6 @@ const useStyles = makeStyles(
         justifyContent: "flex-start",
         alignItems: "center",
         backgroundColor: theme.wcPalette.grey["400"],
-        paddingRight: "8px",
         marginBottom: "2px",
 
         "&:hover": {
@@ -159,6 +158,7 @@ const useStyles = makeStyles(
         fontSize: "10px",
         fontFamily: SourceSansFontFamily,
         flex: "0 0 64px",
+        marginRight: "8px",
 
         "&:hover": {
           backgroundColor: theme.wcPalette.pink.secondary,
