@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import { ThemeProvider } from "@material-ui/styles";
+import { BrowserRouter } from "react-router-dom";
+import { wcTheme } from "./theme";
+import { SiteLayout } from "./layouts/SiteLayout";
+import { Navigator } from "./Navigator";
+import "./global.css";
 
-function App() {
+export const App: FC<any> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={wcTheme}>
+      <BrowserRouter>
+        <SiteLayout>
+          <Navigator />
+        </SiteLayout>
+      </BrowserRouter>
+    </ThemeProvider>
   );
-}
-
-export default App;
+};
